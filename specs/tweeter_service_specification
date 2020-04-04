@@ -1,0 +1,34 @@
+IF file line is 'Alan follows Martin'
+WHEN reading line from a file
+THEN assign 'Alan' and 'Martin' to users list
+
+
+IF file line is 'Alan follows Martin, Ward'
+WHEN reading line from a file
+THEN assign 'Alan', 'Martin' and 'Ward' to users list
+
+
+IF file line is 'Alan follows Martin'
+WHEN reading line from a file
+THEN assign 'Martin' to 'Alan's' following list
+
+
+IF file line is 'Alan follows Martin, Ward'
+WHEN reading line from a file
+THEN assign 'Martin' and 'Ward' to 'Alan's' following list
+
+
+IF file line is 'Martin follows Alan'
+WHEN reading line from a file
+THEN assign 'Martin' to 'Alan's' followers list
+
+
+IF file line is 'Alan follows Martin, Ward'
+WHEN reading line from a file
+THEN assign 'Martin' and 'Ward' to 'Alan's' followers list
+
+
+IF user is 'Alan' and follower is 'Martin'
+WHEN reading line from a file
+THEN output the names in alphabetical order
+

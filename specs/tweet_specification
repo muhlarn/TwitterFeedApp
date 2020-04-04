@@ -1,0 +1,23 @@
+IF tweet(file line) is greater than 140
+WHEN reading line from a file
+THEN output "Tweet exceeds 140 characters"
+
+
+IF tweet(file line) is 'Alan> If you have a procedure with 10 parameters, you probably missed some.'
+WHEN reading line from a tweet file
+THEN assign 'Alan' to Tweeter User
+
+
+IF tweet line is 'Alan If you have a procedure with 10 parameters, you probably missed some.'
+WHEN reading line from a file 
+THEN output "User could not be established. Not well formed!" 
+
+
+IF tweet line is 'Alan>If you have a procedure with 10 parameters, you probably missed some.'
+WHEN reading line from a file 
+THEN output "User or Tweet could not be established. Not well formed!" 
+
+
+IF tweet line is 'Alan> '
+WHEN reading line from a file 
+THEN output "Tweet is empty. Not well formed!" 

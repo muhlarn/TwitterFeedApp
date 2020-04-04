@@ -1,0 +1,38 @@
+IF user line is 'Ward follows '
+WHEN reading line from a file 
+THEN output "User Line contains less than 3 words. Not well formed!" 
+
+
+IF user line is 'Ward follows Alan'
+WHEN reading line from a file 
+THEN assign 'Ward' to Follower and 'Alan' to Following
+
+
+IF user line is 'Ward follows Alan'
+WHEN second word in a line is "follows" 
+THEN assign 'Ward' to Follower and 'Alan' to Following
+
+
+IF user line is 'Ward talks Alan'
+WHEN second word in a line is NOT "follows" 
+THEN output "User Line does not contains "follows" as the second word. Not well formed!" 
+
+
+IF user line is 'Ward follows Alan Martin'
+WHEN fourth word in a line is NOT "," 
+THEN output "User Line does not contains "comma" as the fourth word. Not well formed!" 
+
+
+IF user line is 'Ward follows Alan, Martin'
+WHEN fourth word in a line is a "," 
+THEN 'Alan' and 'Martin' must be comma separated 
+
+
+IF user line is 'Ward follows Alan, Martin, John'
+WHEN fourth word in a line is a "," 
+THEN 'Alan', 'Martin' and 'John' must be comma separated 
+
+
+IF user line is 'Ward follows Alan, Martin, John'
+WHEN fourth word in a line is a "," 
+THEN Followers must be 'Alan', 'Martin' and 'John'
